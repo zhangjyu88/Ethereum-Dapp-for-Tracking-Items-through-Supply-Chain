@@ -1,15 +1,15 @@
 {
   "contractName": "Roles",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Library for managing addresses assigned to a Role.\",\"methods\":{},\"title\":\"Roles\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/Mac_Jingyu/Desktop/nd1309-Project-6b-Example-Template/project-6/contracts/coffeeaccesscontrol/Roles.sol\":\"Roles\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Mac_Jingyu/Desktop/nd1309-Project-6b-Example-Template/project-6/contracts/coffeeaccesscontrol/Roles.sol\":{\"keccak256\":\"0x83e1ec643dd95e59f2b2c5dbe68ce1cf9a51097532ef9e78e5db7e0eecadcf59\",\"urls\":[\"bzz-raw://099819203ed4dcbe079971976118147a0b74fae4ba3c2141fafa2c8d15f6aaad\",\"dweb:/ipfs/QmedevYP9a8PBQDE1CV4qN2rsKjWY48EVB1akr2CVgTKLf\"]}},\"version\":1}",
-  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72315820a1abcb51bba77cdb1abed6ab3096e420c2edbeb7a2195680ad6680863f4d1f5664736f6c63430005100032",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72315820a1abcb51bba77cdb1abed6ab3096e420c2edbeb7a2195680ad6680863f4d1f5664736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Library for managing addresses assigned to a Role.\",\"methods\":{},\"title\":\"Roles\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/Mac_Jingyu/Desktop/Ethereum-Dapp-for-Tracking-Items-through-Supply-Chain/project-6/contracts/coffeeaccesscontrol/Roles.sol\":\"Roles\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Mac_Jingyu/Desktop/Ethereum-Dapp-for-Tracking-Items-through-Supply-Chain/project-6/contracts/coffeeaccesscontrol/Roles.sol\":{\"keccak256\":\"0x83e1ec643dd95e59f2b2c5dbe68ce1cf9a51097532ef9e78e5db7e0eecadcf59\",\"urls\":[\"bzz-raw://099819203ed4dcbe079971976118147a0b74fae4ba3c2141fafa2c8d15f6aaad\",\"dweb:/ipfs/QmedevYP9a8PBQDE1CV4qN2rsKjWY48EVB1akr2CVgTKLf\"]}},\"version\":1}",
+  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a723158204d44b10f1fd5fb15921cf5ff8b5838dce4657b37aa0ab3cc3a36a7360911239e64736f6c63430005100032",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a723158204d44b10f1fd5fb15921cf5ff8b5838dce4657b37aa0ab3cc3a36a7360911239e64736f6c63430005100032",
   "sourceMap": "111:784:5:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
   "deployedSourceMap": "111:784:5:-;;;;;;;;",
   "source": "pragma solidity >= 0.4.24;\n\n/**\n * @title Roles\n * @dev Library for managing addresses assigned to a Role.\n */\nlibrary Roles {\n  struct Role {\n    mapping (address => bool) bearer;\n  }\n\n  /**\n   * @dev give an account access to this role\n   */\n  function add(Role storage role, address account) internal {\n    require(account != address(0));\n    require(!has(role, account));\n\n    role.bearer[account] = true;\n  }\n\n  /**\n   * @dev remove an account's access to this role\n   */\n  function remove(Role storage role, address account) internal {\n    require(account != address(0));\n    require(has(role, account));\n\n    role.bearer[account] = false;\n  }\n\n  /**\n   * @dev check if an account has this role\n   * @return bool\n   */\n  function has(Role storage role, address account)\n    internal\n    view\n    returns (bool)\n  {\n    require(account != address(0));\n    return role.bearer[account];\n  }\n}",
-  "sourcePath": "/Users/Mac_Jingyu/Desktop/nd1309-Project-6b-Example-Template/project-6/contracts/coffeeaccesscontrol/Roles.sol",
+  "sourcePath": "/Users/Mac_Jingyu/Desktop/Ethereum-Dapp-for-Tracking-Items-through-Supply-Chain/project-6/contracts/coffeeaccesscontrol/Roles.sol",
   "ast": {
-    "absolutePath": "/Users/Mac_Jingyu/Desktop/nd1309-Project-6b-Example-Template/project-6/contracts/coffeeaccesscontrol/Roles.sol",
+    "absolutePath": "/Users/Mac_Jingyu/Desktop/Ethereum-Dapp-for-Tracking-Items-through-Supply-Chain/project-6/contracts/coffeeaccesscontrol/Roles.sol",
     "exportedSymbols": {
       "Roles": [
         562
@@ -208,10 +208,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1551,
-                        1552
+                        1558,
+                        1559
                       ],
-                      "referencedDeclaration": 1551,
+                      "referencedDeclaration": 1558,
                       "src": "310:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -334,10 +334,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1551,
-                        1552
+                        1558,
+                        1559
                       ],
-                      "referencedDeclaration": 1551,
+                      "referencedDeclaration": 1558,
                       "src": "346:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -649,10 +649,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1551,
-                        1552
+                        1558,
+                        1559
                       ],
-                      "referencedDeclaration": 1551,
+                      "referencedDeclaration": 1558,
                       "src": "546:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -759,10 +759,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1551,
-                        1552
+                        1558,
+                        1559
                       ],
-                      "referencedDeclaration": 1551,
+                      "referencedDeclaration": 1558,
                       "src": "582:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1074,10 +1074,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1551,
-                        1552
+                        1558,
+                        1559
                       ],
-                      "referencedDeclaration": 1551,
+                      "referencedDeclaration": 1558,
                       "src": "825:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1282,7 +1282,7 @@
     "src": "0:895:5"
   },
   "legacyAST": {
-    "absolutePath": "/Users/Mac_Jingyu/Desktop/nd1309-Project-6b-Example-Template/project-6/contracts/coffeeaccesscontrol/Roles.sol",
+    "absolutePath": "/Users/Mac_Jingyu/Desktop/Ethereum-Dapp-for-Tracking-Items-through-Supply-Chain/project-6/contracts/coffeeaccesscontrol/Roles.sol",
     "exportedSymbols": {
       "Roles": [
         562
@@ -1481,10 +1481,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1551,
-                        1552
+                        1558,
+                        1559
                       ],
-                      "referencedDeclaration": 1551,
+                      "referencedDeclaration": 1558,
                       "src": "310:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1607,10 +1607,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1551,
-                        1552
+                        1558,
+                        1559
                       ],
-                      "referencedDeclaration": 1551,
+                      "referencedDeclaration": 1558,
                       "src": "346:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1922,10 +1922,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1551,
-                        1552
+                        1558,
+                        1559
                       ],
-                      "referencedDeclaration": 1551,
+                      "referencedDeclaration": 1558,
                       "src": "546:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2032,10 +2032,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1551,
-                        1552
+                        1558,
+                        1559
                       ],
-                      "referencedDeclaration": 1551,
+                      "referencedDeclaration": 1558,
                       "src": "582:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2347,10 +2347,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1551,
-                        1552
+                        1558,
+                        1559
                       ],
-                      "referencedDeclaration": 1551,
+                      "referencedDeclaration": 1558,
                       "src": "825:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2560,7 +2560,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.1",
-  "updatedAt": "2020-08-03T08:30:39.321Z",
+  "updatedAt": "2020-08-05T15:35:51.855Z",
   "devdoc": {
     "details": "Library for managing addresses assigned to a Role.",
     "methods": {},

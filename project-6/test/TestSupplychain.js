@@ -54,6 +54,10 @@ contract('SupplyChain', function(accounts) {
         })
 
         // Mark an item as Harvested by calling function harvestItem()
+        await supplyChain.addFarmer(originFarmerID);
+        await supplyChain.addDistributor(distributorID);
+        await supplyChain.addRetailer(retailerID);
+        await supplyChain.addConsumer(consumerID);
         await supplyChain.harvestItem(upc, originFarmerID, originFarmName, originFarmInformation, originFarmLatitude, originFarmLongitude, productNotes, {from: originFarmerID})
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
