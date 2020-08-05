@@ -62,7 +62,7 @@ Change directory to ```project-6``` folder and install all requisite npm package
 ```
 cd project-6
 npm install
-
+npm install --save truffle-hdwallet-provider
 ```
 
 Launch Ganache:
